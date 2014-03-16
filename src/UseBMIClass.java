@@ -10,6 +10,7 @@ import java.awt.event.*;
 
 public class UseBMIClass extends JFrame {
 	
+	JTextField field0 = new JTextField(10);
 	JTextField field = new JTextField(10);
 	JTextField field2 = new JTextField(10);
 	JButton btn = new JButton();
@@ -27,6 +28,9 @@ public class UseBMIClass extends JFrame {
 		
 		BMI bmi2 = new BMI("Susan King", 215, 70);		//Construct an object with name, height and weight.
 		add(new JLabel("The BMI for " + bmi2.getName() + " is " + bmi2.getBMI() + " " + bmi2.getStatus()));		//Add label
+		
+		add(new JLabel("Enter the name "));
+		add(field0);
 		
 		add(new JLabel("Enter the height "));
 		add(field);
@@ -60,8 +64,9 @@ public class UseBMIClass extends JFrame {
 		public void actionPerformed(ActionEvent e)	{
 			double height = Double.parseDouble(field.getText());
 			double weight = Double.parseDouble(field2.getText());
+			String name = field0.getText();
 			
-			BMI bmi3 = new BMI("Name", height, weight);
+			BMI bmi3 = new BMI(name, height, weight);
 			label.setText("The BMI for " + bmi3.getName() + " is " + bmi3.getBMI() + " " + bmi3.getStatus());
 		}
 	}
