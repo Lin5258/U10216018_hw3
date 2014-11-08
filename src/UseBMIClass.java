@@ -20,9 +20,8 @@ public class UseBMIClass extends JFrame {
 		// Set FlowLayout, aligned left with horizontal gap 10
 		// and vertical gap 20 between components
 		setLayout(new FlowLayout(FlowLayout.LEFT, 10, 20));
-		btn.setText("Enter");
 		
-		
+				
 		BMI bmi1 = new BMI("Kim Yang", 18, 145, 70);	//Construct an object with name, age, height and weight.
 		add(new JLabel("The BMI for " + bmi1.getName() + " is " + bmi1.getBMI() + " " + bmi1.getStatus()));		//Add label
 		
@@ -38,6 +37,7 @@ public class UseBMIClass extends JFrame {
 		add(new JLabel("Enter the weight "));	//Add a label
 		add(field2);							//Add a TextField
 		
+		btn.setText("Enter");
 		add(btn);								//Add a button
 		
 		label.setText("Click Enter to compute the BMI");		//Set TextField
@@ -69,6 +69,7 @@ public class UseBMIClass extends JFrame {
 			
 			BMI bmi3 = new BMI(name, height, weight);				//Construct an object with the information that user inputed.
 			label.setText("The BMI for " + bmi3.getName() + " is " + bmi3.getBMI() + " " + bmi3.getStatus());	//Display the result.
+			
 		}
 	}
 
